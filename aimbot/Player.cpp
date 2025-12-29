@@ -34,14 +34,6 @@ Player* Player::GetPlayer(int index)
     return (Player*)(PawnEntry + (0x70 * (PawnHandle & 0x1FF)));
 }
 
-/*
-int* Player::GetMaxPlayer()
-{
-    static uint32_t moduleBase = (uint32_t)GetModuleHandleA("engine.dll");
-    return (int*)((uint32_t)moduleBase + dwClientState + dwClientState_MaxPlayer);
-}
-*/
-
 Vector3* Player::GetOrigin()
 {
     std::cout << "ORIGIN : " << (Vector3*)(*(uintptr_t*)this + m_vecOrigin) << std::endl;
@@ -63,14 +55,6 @@ Vector3* Player::GetBonePos(int boneID)
     uint64_t boneMatrix = *(uint64_t*)(modelState + 0x80);
 
     return (Vector3*)(boneMatrix + (boneID * 0x20));
-
-    /*
-    static Vector3 bonePos;
-    bonePos.x = *(float*)(boneMatrix + 0x20 * boneID + 0x0C);
-    bonePos.y = *(float*)(boneMatrix + 0x20 * boneID + 0x1C);
-    bonePos.z = *(float*)(boneMatrix + 0x20 * boneID + 0x2C);
-    return &bonePos;
-    */
 }
 
 int* Player::GetHealth()
