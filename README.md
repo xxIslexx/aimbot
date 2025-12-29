@@ -8,7 +8,7 @@ This project is an Internal Aimbot for Counter-Strike 2. Unlike external tools, 
 
 The repository serves as a practical study case for:
 - Internal Memory Hooking: Exploring how a DLL executes code within the host process (cs2.exe) to access protected data structures.
-- Source 2 Entity Forensics: Navigating the EntityList and GameSceneNode from the inside to retrieve precise coordinates.
+- Source 2 Entity: Navigating the EntityList and GameSceneNode from the inside to retrieve precise coordinates.
 - Internal Bone Extraction: Accessing the m_modelState and bone array directly from the game's heap to calculate aim targets.
 - Applied FPS Math: Implementing 3D trigonometry (Pitch/Yaw calculations) based on the local player's view position and the target's bone location.
 
@@ -33,6 +33,16 @@ If you run into include errors, ensure:
 - The solution is opened from the repository root
 - The `offsets/` folder exists with the latest .hpp offsets files
 - Your include paths are correct for your setup
+
+## Will I get banned if I use this online ?
+
+Of course. This project contains no built-in security features, anti-cheat bypasses, or obfuscation.
+
+Using this code on any server protected by VAC or VAC Live will result in an immediate and permanent ban.
+
+The current version is a raw "rage-style" base (instant snaps to targets). While you can modify the source code to implement "legit" features (such as Smoothing, RCS, or Visibility Checks), the signature of the DLL and the injection method will still be highly detectable by Valve's heuristic and signature-based scanning.
+
+I may release a more secured or "legit" version of this code in the future,
 
 ## Credits
 
