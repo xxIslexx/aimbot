@@ -31,6 +31,7 @@ LocalPlayer* LocalPlayer::Get()
     
     static uint64_t clientModule = (uint64_t)(GetModuleHandle(L"client.dll"));
     static LocalPlayer* localPlayer = (LocalPlayer*)(clientModule + dwLocalPlayerPawn);
+	std::cout << "LOCAL PLAYER : " << localPlayer << std::endl;
 
     return localPlayer;
     

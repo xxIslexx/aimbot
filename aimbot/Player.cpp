@@ -18,19 +18,20 @@ using namespace cs2_dumper::offsets::client_dll;
 
 Player* Player::GetPlayer(int index)
 {
-    
     static uint64_t moduleBase = (uint64_t)(GetModuleHandleA("client.dll")); //ou GetModuleHandle(L"client.dll")
-    uint64_t entityList = *(uint64_t*)(moduleBase + dwEntityList);                                // index → C_CSPlayerController (team, name, handle) 
+    uint64_t entityList = *(uint64_t*)(moduleBase + dwEntityList);                                // index → C_CSPlayerController (team, name, handle)
+    if (!entityList) return nullptr;
     uint64_t listEntity = *(uint64_t*)(entityList + (0x8 * ((index & 0x7FFF) >> 9) + 0x10));      // handle → C_CSPlayerPawn(origin, health, angles, etc.)
+    if (!listEntity) return nullptr;
     uint64_t entityController = *(uint64_t*)(listEntity + (0x70 * (index & 0x1FF)));
+    if (!entityController) return nullptr;
     uint32_t PawnHandle = *(uint32_t*)(entityController + m_hPlayerPawn);
+    if (!PawnHandle) return nullptr;
     uint64_t PawnEntry = *(uint64_t*)(entityList + (0x8 * ((PawnHandle & 0x7FFF) >> 9) + 0x10));
     uint64_t Pawn = *(uint64_t*)(PawnEntry + (0x70 * (PawnHandle & 0x1FF)));
 
     //int team = *(int*)(Pawn + m_iTeamNum);
-    std::cout << "LOCALPLAYER EXEC : " << index << std::endl;
-
-    //return (Player*)Pawn;
+	std::cout << "CURRENT PLAYER : " << (Player*)(PawnEntry + (0x70 * (PawnHandle & 0x1FF))) << std::endl;
     return (Player*)(PawnEntry + (0x70 * (PawnHandle & 0x1FF)));
 }
 
