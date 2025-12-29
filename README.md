@@ -2,11 +2,11 @@
 >
 > **Do not use this project to cheat in online games, bypass anti-cheat systems, or violate any Terms of Service.**
 
+# CS2 Internal Aimbot
+
 ## Overview
 
-![Aimbot Demo](img/votre_demo.gif)
-
-![Video Project 1](https://github.com/user-attachments/assets/05e1d7b7-066f-4d9b-b75f-e8207b584914)
+![Demo](https://github.com/user-attachments/assets/05e1d7b7-066f-4d9b-b75f-e8207b584914) 
 
 
 This project is an Internal Aimbot for Counter-Strike 2. Unlike external tools, this project is designed to be injected directly into the game's process, allowing for high-performance, real-time interaction with the engine's internal memory.
