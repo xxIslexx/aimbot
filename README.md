@@ -1,23 +1,12 @@
-CS2 Internal Base - Educational Research Project
+> **Educational purposes only.**
+>
+> **Do not use this project to cheat in online games, bypass anti-cheat systems, or violate any Terms of Service.**
 
-This project is an internal C++ dynamic link library (DLL) base designed for Counter-Strike 2. It is developed strictly for educational and research purposes, focusing on memory forensics, game engine architecture, and applied mathematics.
+## Overview
 
-    [!WARNING]
+...
 
-    FOR EDUCATIONAL PURPOSES ONLY. > Using this software on any server protected by Valve Anti-Cheat (VAC) or VAC Live will result in a permanent ban of your account.
-
-🚀 Features
-
-    Internal Memory Access: High-performance read/write operations within the game's process space.
-
-    Source 2 Bone System: Dynamic retrieval of entity bone positions (Head, Neck, Spine) using GameSceneNode and m_modelState structures.
-
-    Vector Math & Trigonometry: Implementation of 3D vector math for calculating precise view angles (Pitch/Yaw).
-
-    Entity State Monitoring: Real-time reading of player health, team status, and pawn visibility.
-
-🛠️ Project Structure
-Plaintext
+## Project Structure
 
 aimbot/
 ├── offsets/            # Updated game offsets (m_pGameSceneNode, dwEntityList, etc.)
@@ -28,30 +17,28 @@ aimbot/
 ├── aimbot.h            # Global definitions and constants
 └── dllmain.cpp         # DLL entry point and main execution loop
 
-⚖️ Legal Disclaimer
+## About the `offsets/` folder (generated headers)
 
-    Academic Use: This project is intended to demonstrate how software interacts with process memory. It should not be used in a competitive environment.
+This repository **does not ship any ready-to-use game offsets**.
 
-    Anti-Cheat Notice: Injecting this DLL while connected to VAC-secured servers is highly detectable due to known signature scans of public tools.
+## Build instructions (Visual Studio)
 
-    No Warranty: The developer assumes no responsibility for account bans, data loss, or any legal consequences resulting from the misuse of this code.
+1. Open `aimbot.sln` in Visual Studio.
+2. Select a configuration (Debug/Release) and platform (x64).
+3. Build the solution.
 
-    Compliance: We encourage testing only in -insecure mode or on private servers with no anti-cheat active.
+If you run into include errors, ensure:
+- The solution is opened from the repository root
+- The `offsets/` folder exists with the latest .hpp offsets files
+- Your include paths are correct for your setup
 
-⚙️ Build Instructions
+## Credits
 
-    Open aimbot.sln in Visual Studio 2022.
+- **Guided Hacking** — BDKPlayer : for educational content explaining FPS math concepts (e.g., `CalcAngle`) and general learning resources (link : https://www.youtube.com/watch?v=sDd8aBCCBbA).
+- **a2x** — credited for community tooling/resources commonly referenced in offset dumping/data extraction discussions.
 
-    Set the configuration to Release | x64.
+## Disclaimer
 
-    Ensure your offsets in the offsets/ directory match the current game version.
-
-    Build the solution to generate the .dll file.
-
-    Inject the resulting DLL into cs2.exe using a manual map injector for testing purposes.
-
-⌨️ Controls
-
-    Toggle ON: Press " (Key 3) to start the main loop.
-
-    Toggle OFF: Press ' (Key 4) to safely exit the loop and stop the execution.
+This code is provided **as-is** for educational and research purposes only.  
+You are responsible for complying with laws, software licenses, and game Terms of Service.  
+The maintainers do not condone cheating, disruption, or bypassing protections in any form.
