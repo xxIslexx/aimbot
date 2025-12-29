@@ -1,10 +1,14 @@
+# CS2 Internal Aimbot
+
 > **Educational purposes only.**
 >
 > **Do not use this project to cheat in online games, bypass anti-cheat systems, or violate any Terms of Service.**
 
-# CS2 Internal Aimbot
-
 ## Overview
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/05e1d7b7-066f-4d9b-b75f-e8207b584914" style="max-width: 100%; height: auto;" width="900" />
+</p>
 
 ![Demo](https://github.com/user-attachments/assets/05e1d7b7-066f-4d9b-b75f-e8207b584914) 
 
