@@ -8,6 +8,8 @@
 
 ## Project Structure
 
+Plaintext
+
 aimbot/
 ├── offsets/            # Updated game offsets (m_pGameSceneNode, dwEntityList, etc.)
 ├── Hack.h              # Main entry point for hack logic management
@@ -16,6 +18,7 @@ aimbot/
 ├── Vector3.h           # 3D Math structure (x, y, z)
 ├── aimbot.h            # Global definitions and constants
 └── dllmain.cpp         # DLL entry point and main execution loop
+
 
 ## About the `offsets/` folder (generated headers)
 
