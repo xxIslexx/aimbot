@@ -55,6 +55,7 @@ I may release a more secured or "legit" version of this code in the future,
 
 - **Guided Hacking** — BDKPlayer : for educational content explaining FPS math concepts (e.g., `CalcAngle`) and general learning resources (link : https://www.youtube.com/watch?v=sDd8aBCCBbA).
 - **a2x** — credited for community tooling/resources commonly referenced in offset dumping/data extraction discussions.
+- **UnKnoWnCheaTs** — thanks to the community.
 
 ## Disclaimer
 
