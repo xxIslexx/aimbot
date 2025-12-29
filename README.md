@@ -17,10 +17,6 @@ aimbot/
 └── dllmain.cpp         # DLL entry point and main execution loop
 ```
 
-## About the `offsets/` folder (generated headers)
-
-This repository **does not ship any ready-to-use game offsets**.
-
 ## Build instructions (Visual Studio)
 
 1. Open `aimbot.sln` in Visual Studio.
