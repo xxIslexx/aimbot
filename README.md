@@ -4,7 +4,18 @@
 
 ## Overview
 
-...
+This project is an Internal Aimbot for Counter-Strike 2. Unlike external tools, this project is designed to be injected directly into the game's process, allowing for high-performance, real-time interaction with the engine's internal memory.
+
+The repository serves as a practical study case for:
+
+    Internal Memory Hooking: Exploring how a DLL executes code within the host process (cs2.exe) to access protected data structures.
+
+    Source 2 Entity Forensics: Navigating the EntityList and GameSceneNode from the inside to retrieve precise coordinates.
+
+    Internal Bone Extraction: Accessing the m_modelState and bone array directly from the game's heap to calculate aim targets.
+
+    Applied FPS Math: Implementing 3D trigonometry (Pitch/Yaw calculations) based on the local player's view position and the target's bone location.
+
 
 ## Project Structure
 
